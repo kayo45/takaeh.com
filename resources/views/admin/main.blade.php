@@ -164,7 +164,7 @@
 
 <!-- Chart JS -->
 
-<script src='{{asset('js/chart.js')}}'></script>
+<script src="{{asset('js/chart.js')}}"></script>
 
 <!-- Main JS-->
 
