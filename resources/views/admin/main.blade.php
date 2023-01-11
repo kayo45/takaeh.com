@@ -14,6 +14,8 @@
 
     <meta name="author" content="KayoXLV" />
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Links -->
 
     @if(isset($siteInfo->favicon))
@@ -187,6 +189,12 @@
 <script type="text/javascript" src="{{ asset('datatable/datatable.responsive.min.js') }}"></script>
 
 <script src="{{ asset('/vendor/translation/js/app.js') }}"></script>
+
+<script>
+window.Laravel = <?php echo json_encode([
+    'csrfToken' => csrf_token(),
+]); ?>
+</script>
 
 @stack('scripts')
 @notifyJs
