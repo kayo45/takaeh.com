@@ -12,7 +12,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="LionCoders" />
+    <meta name="author" content="KayoXLV" />
 
     <!-- Links -->
 
@@ -86,7 +86,7 @@
 
     <!-- Document Title -->
 
-    <title>SarchHolm - Real Estate HTML Template</title>
+    <title>{{$siteInfo->title}}</title>
 
 </head>
 
