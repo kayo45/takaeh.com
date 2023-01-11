@@ -41,7 +41,7 @@ class PropertyController extends Controller
                                 ICurrencyModel $currencyModel)
     {
         $this->middleware('credit', ['except' => ['index','edit','update','myProperties']]);
-//        $this->middleware('isApprove', ['only' => ['edit','update']]);
+        $this->middleware('isApprove', ['only' => ['edit','update']]);
         $this->_propertyModel = $propertyModel;
         $this->_propertyTranslationModel = $propertyTranslationModel;
         $this->_categoryTranslationModel = $categoryTranslationModel;
