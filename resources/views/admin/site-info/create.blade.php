@@ -228,7 +228,7 @@
 <!-- <script src="{{asset('ckeditor/ckeditor.js')}}"></script> -->
 
 <script src="https://cdn.ckeditor.com/4.4.7/standard-all/ckeditor.js"></script>
-<script src="http://cdn.ckeditor.com/4.4.7/standard-all/adapters/jquery.js"></script>
+<script src="https://cdn.ckeditor.com/4.4.7/standard-all/adapters/jquery.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
