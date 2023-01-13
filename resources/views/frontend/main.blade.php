@@ -302,13 +302,13 @@
 @stack('script')
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6RR4WDK0VN"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140122525-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-6RR4WDK0VN');
+    gtag('config', 'UA-140122525-1');
 </script>
 <script src="{{asset('js/sweetalert2@11.js')}}"></script>
 @if(!env('USER_VERIFIED'))
