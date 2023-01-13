@@ -22,6 +22,14 @@
     <meta property="twitter:image" content="http://demo.lion-coders.com/html/sarchholm-real-estate-template/images/header/hero_1.jpg" />
     <!-- Links -->
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PSKGCSF');</script>
+    <!-- End Google Tag Manager -->
+
     @if(isset($siteInfo->favicon))
         @if(file_exists( public_path() . '/images/images/'.$siteInfo->favicon))
             <link rel="icon" type="image/png" href="{{ URL::asset('/images/images/'.$siteInfo->favicon) }}" />
@@ -68,6 +76,10 @@
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSKGCSF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 @if(!env('USER_VERIFIED'))
 <div id="demo">
 
