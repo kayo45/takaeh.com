@@ -9,11 +9,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="LionCoders" />
+    <meta name="author" content="Takaeh.com" />
     <meta name="description" content="{{isset($siteInfo->description) ? $siteInfo->description : 'description'}}">
     <!--open graph metas-->
-    <meta property="og:site_name" content="SarchHolm, Your real estate solution" />
-    <meta property=“og:title” content="{{isset($siteInfo->title) ? $siteInfo->title : 'SarchHolm'}}" />
+    <meta property="og:site_name" content="Takaeh, Your real estate solution" />
+    <meta property=“og:title” content="{{isset($siteInfo->title) ? $siteInfo->title : 'Takaeh'}}" />
     <meta property="og:description" content="{{isset($siteInfo->description) ? $siteInfo->description : 'description'}}" />
     <meta property="og:url" content="http://demo.lion-coders.com/soft/sarchholm" />
     <meta property="og:type" content="website" />
@@ -64,7 +64,7 @@
     @stack('styles')
 
     <!-- Document Title -->
-    <title>@yield('title',isset($siteInfo->title) ? $siteInfo->title : 'SarchHolm')</title>
+    <title>@yield('title',isset($siteInfo->title) ? $siteInfo->title : 'Takaeh')</title>
 </head>
 
 <body>
@@ -302,13 +302,13 @@
 @stack('script')
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211233993-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6RR4WDK0VN"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-211233993-1');
+    gtag('config', 'G-6RR4WDK0VN');
 </script>
 <script src="{{asset('js/sweetalert2@11.js')}}"></script>
 @if(!env('USER_VERIFIED'))

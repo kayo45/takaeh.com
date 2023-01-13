@@ -4,8 +4,8 @@
     @include('frontend.includes.hero')
     <!--Hero section ends-->
     <!--Popular Cities starts>
-    <!--Popular Cities ends>
-    <!--Popular Property starts-->
+    Popular Cities ends>
+    Popular Property starts-->
     @include('frontend.includes.popular-properties')
     @include('frontend.includes.popular-city')
 
@@ -137,7 +137,7 @@
         $(document).on('click', 'li', function(){
             var text = $(this).text();
             var city = text.substring(0, text.indexOf(','));
-            
+
             $('#city_name').val(city);
             $('#cityList').fadeOut();
         });
