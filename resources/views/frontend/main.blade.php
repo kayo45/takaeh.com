@@ -301,7 +301,7 @@
 
 @stack('script')
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBJ5X0ZZKY"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
