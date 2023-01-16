@@ -118,6 +118,7 @@
                         <img loading="lazy" src="{{URL::asset('/images/users/'.$user->image)}}" alt="...">
                     @else
                         <img loading="lazy" src="{{asset('images/agents/agent_1.jpg')}}" alt="...">
+                    @endif
 
                         <span>{{auth()->user()->username}} <i class="las la-caret-down"></i></span>
 
