@@ -322,7 +322,7 @@
 <!--CKEditor JS-->
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
-    CKEDITOR.replace('content');
+    CKEDITOR.replace('list_info');
     CKEDITOR.on("instanceReady", function(event) {
         event.editor.on("beforeCommandExec", function(event) {
             // Show the paste dialog for the paste buttons and right-click paste
