@@ -15,11 +15,11 @@
     <meta property="og:site_name" content="Takaeh, Your real estate solution" />
     <meta property=“og:title” content="{{isset($siteInfo->title) ? $siteInfo->title : 'Takaeh'}}" />
     <meta property="og:description" content="{{isset($siteInfo->description) ? $siteInfo->description : 'description'}}" />
-    <meta property="og:url" content="http://demo.lion-coders.com/soft/sarchholm" />
+    <meta property="og:url" content="https://Takaeh.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://demo.lion-coders.com/html/sarchholm-real-estate-template/images/header/hero_1.jpg" />
+    <meta property="og:image" content="{{asset('images/favicon.png')}}" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="http://demo.lion-coders.com/html/sarchholm-real-estate-template/images/header/hero_1.jpg" />
+    <meta property="twitter:image" content="{{asset('images/favicon.png')}}" />
     <!-- Links -->
 
     <!-- Google Tag Manager -->

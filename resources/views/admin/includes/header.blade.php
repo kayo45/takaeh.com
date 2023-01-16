@@ -117,7 +117,7 @@
                     @if(file_exists( public_path() . '/images/users/'.$user->image))
                         <img loading="lazy" src="{{URL::asset('/images/users/'.$user->image)}}" alt="...">
                     @else
-{{--                        <img loading="lazy" src="{{asset('images/agents/agent_1.jpg')}}" alt="...">--}}
+                    <img loading="lazy" src="{{asset('images/agents/agent_1.jpg')}}" alt="...">
                         <img loading="lazy" src="{{Auth()->user()->image}}" alt="...">
                     @endif
 

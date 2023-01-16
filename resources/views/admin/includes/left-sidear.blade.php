@@ -3,7 +3,7 @@
         <a href="{{url('/')}}">
             @if(isset($siteInfo->logo))
             @if(file_exists( public_path() . '/images/images/'.$siteInfo->logo))
-                <img loading="lazy" src="{{ URL::asset('/images/images/'.$siteInfo->logo) }}" id="preview-image-before-upload" alt="Image">
+                <img loading="lazy" src="{{ URL::asset('/images/images/'.$siteInfo->logo) }}" id="preview-image-logo" alt="Image">
             @else
                 <img loading="lazy" src="{{asset('images/logo-blue.png')}}" alt="logo2" class="img-fluid">
             @endif

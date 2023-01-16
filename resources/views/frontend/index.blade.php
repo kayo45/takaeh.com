@@ -103,12 +103,9 @@
         }
     });
 
-    $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) +
-"-" + $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "-" + $( "#slider-range" ).slider( "values", 1 ) );
 
-
-   $( "#area" ).val($( "#slider-range_area" ).slider( "values", 0 ) +
-"-" + $( "#slider-range_area" ).slider( "values", 1 ) );
+    $( "#area" ).val($( "#slider-range_area" ).slider( "values", 0 ) + "-" + $( "#slider-range_area" ).slider( "values", 1 ) );
 
 });
 
@@ -117,20 +114,20 @@
 <script>
     $(document).ready(function(){
 
-     $('#city_name').keyup(function(){
+        $('#city_name').keyup(function(){
             var query = $(this).val();
             if(query != '')
             {
-             var _token = $('input[name="_token"]').val();
-             $.ajax({
-              url:"{{ route('autocomplete.fetch') }}",
-              method:"POST",
-              data:{query:query, _token:_token},
-              success:function(data){
-               $('#cityList').fadeIn();
+            var _token = $('input[name="_token"]').val();
+            $.ajax({
+            url:"{{ route('autocomplete.fetch') }}",
+            method:"POST",
+            data:{query:query, _token:_token},
+            success:function(data){
+            $('#cityList').fadeIn();
                         $('#cityList').html(data);
-              }
-             });
+            }
+            });
             }
         });
 

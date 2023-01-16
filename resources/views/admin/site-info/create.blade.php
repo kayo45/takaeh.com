@@ -266,7 +266,7 @@
 
             reader.onload = (e) => {
 
-                $('#preview-image-before-upload').attr('src', e.target.result);
+                $('#preview-image-logo').attr('src', e.target.result);
             }
 
             reader.readAsDataURL(this.files[0]);

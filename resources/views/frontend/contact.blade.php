@@ -50,18 +50,17 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="contact-info-item">
                         <i class="las la-map-marker-alt"></i>
-                        <h4>Corporate Office</h4>
-                        <p>7652 Washington Avenue, Suite 315
-                            Miami Beach, FL 33139</p>
+                        <h4>Office</h4>
+                        <p>{{isset($siteInfo->address) ? $siteInfo->address : 'address'}}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="contact-info-item">
                         <i class="las la-phone-alt"></i>
                         <h4>Direct Contact</h4>
-                        <p><strong>Phone : </strong> 800 987 6543</p>
-                        <p><strong>Email : </strong> 800 987 6543</p>
-                        <p><strong>Website : </strong> 800 987 6543</p>
+                        <p><strong>Phone : </strong> {{isset($siteInfo->phone) ? $siteInfo->phone : 'phone'}}</p>
+                        <p><strong>Email : </strong> {{isset($siteInfo->email) ? $siteInfo->email : 'email'}}</p>
+                        <p><strong>Website : </strong> <a href="{{url()}}"> www.Takaeh.com</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -69,8 +68,8 @@
                         <i class="las la-business-time"></i>
                         <h4>Business Hours</h4>
                         <p><strong>Sunday : </strong> Closed</p>
-                        <p><strong>Monday-Friday : </strong>10AM - 8PM</p>
-                        <p><strong>Saturday : </strong>10AM - 2PM</p>
+                        <p><strong>Monday-Friday : </strong>09.AM - 05.PM</p>
+                        <p><strong>Saturday : </strong>10.AM - 02.PM</p>
                     </div>
                 </div>
             </div>
