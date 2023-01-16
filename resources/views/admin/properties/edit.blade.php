@@ -114,6 +114,7 @@
                                         <label>Latitude</label>
                                         <input type="text" name="lat" class="form-control filter-input" value="{{$property->lat}}" placeholder="Ex: 1.462260">
                                     </div>
+                                    <p> <a href="https://www.latlong.net/" target="_blank"> Find Location </a></p>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
