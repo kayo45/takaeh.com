@@ -235,7 +235,7 @@
                                 <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="list_info">Content</label>
-                                            <textarea name="content" class="form-control ckeditor" id="list_info" rows="4" placeholder="Enter your text here">{!! $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null !!}</textarea>
+                                            <textarea name="content" class="form-control ckeditor" id="list_info2" rows="4" placeholder="Enter your text here">{!! $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null !!}</textarea>
                                         </div>
                                 </div>
                             </div>
@@ -323,6 +323,7 @@
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
     CKEDITOR.replace('list_info');
+    CKEDITOR.replace('list_info2');
     CKEDITOR.on("instanceReady", function(event) {
         event.editor.on("beforeCommandExec", function(event) {
             // Show the paste dialog for the paste buttons and right-click paste
@@ -335,9 +336,9 @@
             }
         })
     });
-    // $(document).ready(function () {
-    //     $('.ckeditor').ckeditor();
-    // });
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
 </script>
 
 <script>
