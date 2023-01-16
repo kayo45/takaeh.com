@@ -248,7 +248,7 @@
                                 <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="list_info">Content</label> <span class="text-danger">*</span>
-                                            <textarea name="content" class="form-control ckeditor" id="list_info" rows="4" placeholder="Enter your text here">{{old('content')}}</textarea>
+                                            <textarea name="content" class="form-control ckeditor" id="list_info2" rows="4" placeholder="Enter your text here">{{old('content')}}</textarea>
                                             @error('content')
                                             <p class="text-danger">{{$message}}</p>
                                             @enderror
@@ -323,6 +323,20 @@
 <!--CKEditor JS-->
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
+    CKEDITOR.replace('list_info');
+    CKEDITOR.replace('list_info2');
+    CKEDITOR.on("instanceReady", function(event) {
+        event.editor.on("beforeCommandExec", function(event) {
+            // Show the paste dialog for the paste buttons and right-click paste
+            if (event.data.name == "paste") {
+                event.editor._.forcePasteDialog = true;
+            }
+            // Don't show the paste dialog for Ctrl+Shift+V
+            if (event.data.name == "pastetext" && event.data.commandData.from == "keystrokeHandler") {
+                event.cancel();
+            }
+        })
+    });
     $(document).ready(function () {
         $('.ckeditor').ckeditor();
     });
