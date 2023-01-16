@@ -322,6 +322,7 @@
 <!--CKEditor JS-->
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
+    CKEDITOR.replace('content');
     $(document).ready(function () {
         $('.ckeditor').ckeditor();
     });
