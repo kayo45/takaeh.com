@@ -34,16 +34,16 @@ class BookingRequestController extends Controller
         $email = request('email');
         $message = request('message');
 
-        $user->notify(new BookingNotfication($title,$address,$date,$time,$name,$phone,$email,$message));
+        // $user->notify(new BookingNotfication($title,$address,$date,$time,$name,$phone,$email,$message));
         // Notification::send(request('email'), new SendMail());
-        // Booking::create([
-        //     'booking_id'=>'booking',
-        //     'agent_id' => request('id'),
-        //     'property_id' => request('property_id'),
-        //     'booking_info' => request('comment'),
-        //     'status' => 0,
-        // ]
-        // );
+        Booking::create([
+            'booking_id'=>'booking',
+            'agent_id' => request('id'),
+            'property_id' => request('property_id'),
+            'booking_info' => request('comment'),
+            'status' => 0,
+        ]
+        );
 
         $data = [];
         $data['title'] = request('title');
@@ -54,7 +54,7 @@ class BookingRequestController extends Controller
         $data['phone'] = request('phone');
         $data['email'] = request('email');
         $data['message'] = request('message');
-        Mail::to($user->email)->send(new BookingRequest($data));
+        // Mail::to($user->email)->send(new BookingRequest($data));
         return redirect()->back()->with('message','Your request is successfully submitted!');
     }
 }
