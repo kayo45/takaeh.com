@@ -317,11 +317,11 @@
 
                                             <li>Property Price : <span>{{$property->type == 'sale' ? $property->price : $property->price.'/month' }}</span></li>
 
-                                            <li>Rooms : <span>6</span></li>
+                                            <li>Rooms Size : <span>{{$property->propertyDetails->room_size}}</span></li>
 
-                                            <li>Bedrooms: <span>{{$property->propertyDetails->garage}}</span></li>
+                                            <li>Bedrooms: <span>{{$property->propertyDetails->bed}}</span></li>
 
-                                            <li>Bath: <span>{{$property->propertyDetails->garage}}</span></li>
+                                            <li>Bath: <span>{{$property->propertyDetails->bath}}</span></li>
 
                                             <li>Garages: <span>{{$property->propertyDetails->garage}}</span></li>
 
