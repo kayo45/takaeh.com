@@ -125,7 +125,6 @@
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
                                         <div class="form-text"> <a href="https://www.latlong.net/" target="_blank"> Find Location </a></div>
-
                                     </div>
                                 </div>
                                 <div class="col-md-6">

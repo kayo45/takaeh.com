@@ -168,7 +168,7 @@
 
                                     <div class="overview-content">
 
-                                        <p class="mb-10">{!! $property->description ?? $property->description  ?? null !!}</p>
+                                        <p class="mb-10">{!! $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content  ?? null !!}</p>
 
                                     </div>
 
