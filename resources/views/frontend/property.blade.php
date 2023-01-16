@@ -169,10 +169,10 @@
                                     <div class="overview-content">
 
                                         <p class="mb-10">
-                                        @php
+                                            {!!
                                             $property->propertyDetails->propertyDetailTranslation->content ??
                                             $property->propertyDetails->propertyDetailTranslationEnglish->content  ?? null
-                                        @endphp
+                                            !!}
                                         </p>
 
                                     </div>
