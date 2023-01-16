@@ -124,8 +124,9 @@
                                         @error('lat')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
+                                        <div class="form-text"> <a href="https://www.latlong.net/" target="_blank"> Find Location </a></div>
+
                                     </div>
-                                    <p> <a href="https://www.latlong.net/" target="_blank"> Find Location </a></p>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
