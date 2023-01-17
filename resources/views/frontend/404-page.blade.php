@@ -1,4 +1,5 @@
 @extends('frontend.main')
+@section('title',$property->propertyTranslation->title ?? $property->propertyTranslationEnglish->title ?? null)
 @section('content')
     <!--error  start-->
     <div class="error-section mt-150 pb-100">
