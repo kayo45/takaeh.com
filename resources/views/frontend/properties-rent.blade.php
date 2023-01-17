@@ -380,7 +380,7 @@
                     '<img src="' + locationImg + '" alt="..."/>' +
 
                     '<div class = "marker_price trend-open">' +
-                    '<p>' + '$' + locationAddress +
+                    '<p>' + 'Rp ' + locationAddress +
                     '<span>month</span>' +
                     '</p>' +
                     '</div>' +
@@ -445,7 +445,7 @@
                         '<img src="'+"{{url('/')}}"+'/images/thumbnail/' + locations[i].thumbnail + '" alt="..."/>' +
 
                         '<div class = "marker_price trend-open">' +
-                        '<p>' + '$' + locations[i].price +
+                        '<p>' + 'Rp ' + locations[i].price +
                         '<span>month</span>' +
                         '</p>' +
                         '</div>' +

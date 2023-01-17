@@ -524,7 +524,7 @@
                         '<img src="'+"{{url('/')}}"+'/images/thumbnail/' + locations[i].thumbnail + '" alt="..."/>' +
 
                         '<div class = "marker_price trend-open">' +
-                        '<p>' + '$' + locations[i].price +
+                        '<p>' + 'Rp' + locations[i].price +
                         '<span>month</span>' +
                         '</p>' +
                         '</div>' +
