@@ -29,12 +29,12 @@
                         <div class="row mb-50">
                             <div class="col-lg-5 col-md-6 col-sm-5">
                             @if(!env('USER_VERIFIED'))
-                            <img loading="lazy" src="{{asset('images/agents/agent_1.jpg')}}" alt="#">
+                            <img loading="lazy" src="{{asset('images/users/agent.jpg')}}" alt="#">
                             @else
                                 @if(file_exists( public_path() . '/images/users/'.$agent->image))
                                     <img loading="lazy" src="{{ URL::asset('/images/users/'.$agent->image) }}" alt="Image">
                                 @else
-                                    <img loading="lazy" src="{{asset('images/agents/agent_1.jpg')}}" alt="#">
+                                    <img loading="lazy" src="{{asset('images/users/agent.jpg')}}" alt="#">
                                 @endif
                             @endif
                             </div>
