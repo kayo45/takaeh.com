@@ -89,7 +89,7 @@
                             <ul class="social-buttons style2">
                                 <li><a href="{{isset($siteInfo->fb) ? $siteInfo->fb : '#'}}" target="_blank"><i class="lab la-facebook-f"></i></a></li>
                                 <li><a href="{{isset($siteInfo->twitter) ? $siteInfo->twitter : '#'}}" target="_blank"><i class="lab la-twitter"></i></a></li>
-                                <li><a href="{{isset($siteInfo->pinterest) ? $siteInfo->pinterest : '#'}}" target="_blank"><i class="lab la-pinterest-p"></i></a></li>
+                                <li><a href="{{isset($siteInfo->instagram) ? $siteInfo->instagram : '#'}}" target="_blank"><i class="lab la-instagram"></i></a></li>
                                 <li><a href="{{isset($siteInfo->yt) ? $siteInfo->yt : '#'}}" target="_blank"><i class="lab la-youtube"></i></a></li>
                             </ul>
                         </div>
