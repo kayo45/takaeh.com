@@ -104,9 +104,9 @@
 
                                         <div class="trend-open">
 
-                                            @if($property->type == 'sale') <p><span class="per_sale">starts from</span>{{$property->currency->icon}}{{$property->price}}</p> @endif
+                                            @if($property->type == 'sale') <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p> @endif
 
-                                            @if($property->type == 'rent') <p>{{$property->currency->icon}}{{$property->price}}<span class="per_month">month</span></p> @endif
+                                            @if($property->type == 'rent') <p>{{$property->currency->icon}} {{$property->price}}<span class="per_month">month</span></p> @endif
 
                                         </div>
 
@@ -315,7 +315,7 @@
 
                                             <li>Property status : <span>For {{$property->type}}</span></li>
 
-                                            <li>Property Price : <span>{{$property->type == 'sale' ? $property->price : $property->price.'/month' }}</span></li>
+                                            <li>Property Price : <span>{{$property->currency->icon}} {{$property->type == 'sale' ? $property->price : $property->price.'/month' }}</span></li>
 
                                             <li>Rooms Size : <span>{{$property->propertyDetails->room_size}}</span></li>
 

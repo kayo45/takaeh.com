@@ -141,8 +141,8 @@
                                                                 </li>
                                                             </ul>
                                                             <div class="trending-bottom trend-open">
-                                                                @if($property->type == 'sale') <p><span class="per_sale">starts from</span>${{$property->price}}</p> @endif
-                                                                @if($property->type == 'rent') <p>${{$property->price}}<span class="per_month">month</span></p> @endif
+                                                                @if($property->type == 'sale') <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p> @endif
+                                                                @if($property->type == 'rent') <p>{{$property->currency->icon}} {{$property->price}}<span class="per_month">month</span></p> @endif
                                                             </div>
                                                         </div>
                                                     </div>
@@ -208,7 +208,7 @@
                                                                 </li>
                                                             </ul>
                                                             <div class="trending-bottom trend-open">
-                                                                <p><span class="per_sale">starts from</span>${{$property->price}}</p>
+                                                                <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -273,7 +273,7 @@
                                                                 </li>
                                                             </ul>
                                                             <div class="trending-bottom trend-open">
-                                                                    <p>${{$property->price}}<span class="per_month">month</span> </p>
+                                                                    <p>{{$property->currency->icon}} {{$property->price}}<span class="per_month">month</span> </p>
                                                             </div>
                                                         </div>
                                                     </div>
