@@ -1,11 +1,11 @@
 @extends('admin.main')
 @push('styles')
-<style>
+<!-- <style>
     .imgPreview img {
         padding: 8px;
         max-width: 100px;
     }
-</style>
+</style> -->
 <style>
     .images-preview-div img
     {
