@@ -60,9 +60,13 @@
                                         <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12">
                                             <div class="single-team-member agent-item v1">
                                                 @if(!env('USER_VERIFIED'))
-                                                <img loading="lazy" src="{{'images/users/agent_1.jpg'}}" alt="" width="380" height="400">
+                                                <img loading="lazy" src="{{'images/users/agent.jpg'}}" alt="" width="380" height="400">
                                                 @else
-                                                <img loading="lazy" src="{!! $agent->photo() !!}" alt="">
+                                                    @if(file_exists( public_path() . '/images/users/'.$agent->image))
+                                                        <img loading="lazy" src="{{ URL::asset('/images/users/'.$agent->image) }}" alt="Image">
+                                                    @else
+                                                        <img loading="lazy" src="{{asset('images/users/agent.jpg')}}" alt="#">
+                                                    @endif
                                                 @endif
                                                 <div class="single-team-info">
                                                     <div class="agent-content">
@@ -74,7 +78,7 @@
                                                                     <div class="icon">
                                                                         <i class="las la-phone-alt"></i>
                                                                     </div>
-                                                                    <div class="text"><a href="tel:44078767595">{{$agent->mobile}}</a></div>
+                                                                    <div class="text"><a href="tel:{{$agent->mobile}}">{{$agent->mobile}}</a></div>
                                                                 </div>
                                                             </li>
 
@@ -91,7 +95,7 @@
                                                             <li><a href="{{$agent->fb}}"><i class="lab la-facebook-f"></i></a></li>
                                                             <li><a href="{{$agent->twitter}}"><i class="lab la-twitter"></i></a></li>
                                                             <li><a href="{{$agent->instagram}}"><i class="lab la-pinterest-p"></i></a></li>
-                                                            <li><a href="{{$agent->fb}}"><i class="lab la-youtube"></i></a></li>
+                                                            <li><a href="{{$agent->youtube}}"><i class="lab la-youtube"></i></a></li>
                                                         </ul>
                                                         <a href="{{url('/agents/'.$agent->id)}}" class="agent-link">{{trans('file.view_profile')}}</a>
                                                     </div>
