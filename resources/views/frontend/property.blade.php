@@ -425,9 +425,13 @@
                                 <h3 class="widget-title">{{trans('file.contact_agency')}}</h3>
                                 <div class="single-team-member agent-item v1">
                                     @if(!env('USER_VERIFIED'))
-                                    <img loading="lazy" src="{{URL::asset('/images/users/agent_1.jpg')}}" alt="">
+                                    <img loading="lazy" src="{{URL::asset('/images/users/agent.jpg')}}" alt="">
                                     @else
-                                    <img loading="lazy" src="{{URL::asset('/images/users/'.$property->user->image)}}" alt="">
+                                        @if(file_exists( public_path() . '/images/users/'.$agent->image))
+                                            <img loading="lazy" src="{{ URL::asset('/images/users/'.$agent->image) }}" alt="Image">
+                                        @else
+                                            <img loading="lazy" src="{{asset('images/agents/agent.jpg')}}" alt="#">
+                                        @endif
                                     @endif
                                     <div class="single-team-info">
                                         <div class="agent-content">
