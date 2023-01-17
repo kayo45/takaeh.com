@@ -207,7 +207,7 @@ class PropertyModel implements IPropertyModel
         $dataProperty['status'] = $request->input('status');
         $dataProperty['moderation_status'] = $request->input('moderation_status');
         $dataProperty['is_featured'] = (int) $request->has('is_featured');
-        $dataProperty['description'] = $request->description;
+        $dataProperty['description'] = $request->input('description');
         $dataProperty['package_id'] = $request->input('package_id');
         $dataProperty['facility_id'] = $request->input('facility_id');
         $dataProperty['thumbnail'] = $thumbnailName;
@@ -234,7 +234,7 @@ class PropertyModel implements IPropertyModel
         $dataPropertyDetail['garage'] = $request->input('garage');
         $dataPropertyDetail['floor'] = $request->input('floor');
         $dataPropertyDetail['room_size'] = $request->input('room_size');
-        $dataPropertyDetail['content'] = $request->input('content');
+        $dataPropertyDetail['content'] = $request->content;
         $dataPropertyDetail['video'] = $request->input('video');
         $dataPropertyDetail['locale'] = $locale;
 
@@ -279,7 +279,7 @@ class PropertyModel implements IPropertyModel
         // $dataProperty['status'] = $property['status'];
         // $dataProperty['moderation_status'] =$property['moderation_status'];
         $dataProperty['is_featured'] = (int) $request->has('is_featured');
-        $dataProperty['description'] = $request->description;
+        $dataProperty['description'] = $request->input('description');
         $dataProperty['package_id'] = $request->input('package_id');
         $dataProperty['facility_id'] = $request->input('facility_id');
         $dataProperty['thumbnail'] = $thumbnailName;
@@ -292,7 +292,7 @@ class PropertyModel implements IPropertyModel
         $dataPropertyDetail['garage'] = $request->input('garage');
         $dataPropertyDetail['floor'] = $request->input('floor');
         $dataPropertyDetail['room_size'] = $request->input('room_size');
-        $dataPropertyDetail['content'] = $request->input('content');
+        $dataPropertyDetail['content'] = $request->content;
         $dataPropertyDetail['video'] = $request->input('video');
         $dataPropertyDetail['locale'] = $request->input('local');
 

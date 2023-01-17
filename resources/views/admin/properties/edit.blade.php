@@ -320,7 +320,7 @@
 @endsection
 @push('scripts')
 <!--CKEditor JS-->
-<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+<!-- <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
     CKEDITOR.replace('list_info');
     CKEDITOR.replace('list_info2');
@@ -339,8 +339,16 @@
     $(document).ready(function () {
         $('.ckeditor').ckeditor();
     });
-</script>
+</script> -->
 
+<script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#list_info2' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 
 
 <script>
