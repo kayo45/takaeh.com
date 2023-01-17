@@ -20,7 +20,7 @@ $(document).ready(function () {
                 '<img src="' + locationImg + '" alt="..."/>' +
 
                 '<div class = "marker_price trend-open">' +
-                '<p>' + '$' + locationAddress +
+                '<p>' + 'Rp ' + locationAddress +
                 '<span>month</span>' +
                 '</p>' +
                 '</div>' +
@@ -78,7 +78,7 @@ $(document).ready(function () {
                     '</div>' +
                     '</div>'
             });
-            var popupOptions = {   
+            var popupOptions = {
                 'maxWidth': '270',
                 'className': 'leaflet-infoBox'
             }
@@ -92,7 +92,7 @@ $(document).ready(function () {
                 '<img src="images/thumbnail/' + locations[i].thumbnail + '" alt="..."/>' +
 
                 '<div class = "marker_price trend-open">' +
-                '<p>' + '$' + locations[i].price +
+                '<p>' + 'Rp ' + locations[i].price +
                 '<span>month</span>' +
                 '</p>' +
                 '</div>' +
