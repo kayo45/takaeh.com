@@ -207,7 +207,7 @@ class PropertyModel implements IPropertyModel
         $dataProperty['status'] = $request->input('status');
         $dataProperty['moderation_status'] = $request->input('moderation_status');
         $dataProperty['is_featured'] = (int) $request->has('is_featured');
-        $dataProperty['description'] = $request->input('description');
+        $dataProperty['description'] = $request->description;
         $dataProperty['package_id'] = $request->input('package_id');
         $dataProperty['facility_id'] = $request->input('facility_id');
         $dataProperty['thumbnail'] = $thumbnailName;
@@ -279,7 +279,7 @@ class PropertyModel implements IPropertyModel
         // $dataProperty['status'] = $property['status'];
         // $dataProperty['moderation_status'] =$property['moderation_status'];
         $dataProperty['is_featured'] = (int) $request->has('is_featured');
-        $dataProperty['description'] = $request->input('description');
+        $dataProperty['description'] = $request->description;
         $dataProperty['package_id'] = $request->input('package_id');
         $dataProperty['facility_id'] = $request->input('facility_id');
         $dataProperty['thumbnail'] = $thumbnailName;

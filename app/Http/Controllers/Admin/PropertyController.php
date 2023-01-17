@@ -75,8 +75,8 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
 
-        dd($request);
-        // $this->_propertyModel->add($request);
+        // dd($request);
+        $this->_propertyModel->add($request);
         return redirect()->route('admin.properties.index');
     }
 
