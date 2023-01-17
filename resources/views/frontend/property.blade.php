@@ -430,7 +430,7 @@
                                         @if(file_exists( public_path() . '/images/users/'.$property->user->image))
                                             <img loading="lazy" src="{{ URL::asset('/images/users/'.$property->user->image) }}" alt="Image">
                                         @else
-                                            <img loading="lazy" src="{{asset('images/agents/agent_1.jpg')}}" alt="#">
+                                            <img loading="lazy" src="{{asset('images/agents/agent.jpg')}}" alt="#">
                                         @endif
                                     @endif
                                     <div class="single-team-info">
