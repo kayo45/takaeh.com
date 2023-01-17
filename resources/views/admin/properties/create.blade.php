@@ -325,7 +325,7 @@
 <script type="text/javascript">
     CKEDITOR.replace('list_info');
     CKEDITOR.replace('list_info2', {
-            filebrowserUploadUrl: "{{ route(''admin.properties.store', ['_token' => csrf_token()]) }}",
+            filebrowserUploadUrl: "{{ route('admin.properties.store', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form'
     });
 </script> -->
