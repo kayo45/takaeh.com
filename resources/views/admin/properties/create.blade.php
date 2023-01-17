@@ -1,11 +1,11 @@
 @extends('admin.main')
 @push('styles')
-{{--<style>--}}
-    {{--.imgPreview img {--}}
-        {{--padding: 8px;--}}
-        {{--max-width: 100px;--}}
-    {{--}--}}
-{{--</style>--}}
+<style>
+    .imgPreview img {
+        padding: 8px;
+        max-width: 100px;
+    }
+</style>
 <style>
     .images-preview-div img
     {
@@ -321,25 +321,22 @@
 @endsection
 @push('scripts')
 <!--CKEditor JS-->
-<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+<!-- <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
     CKEDITOR.replace('list_info');
-    CKEDITOR.replace('list_info2');
-    CKEDITOR.on("instanceReady", function(event) {
-        event.editor.on("beforeCommandExec", function(event) {
-            // Show the paste dialog for the paste buttons and right-click paste
-            if (event.data.name == "paste") {
-                event.editor._.forcePasteDialog = true;
-            }
-            // Don't show the paste dialog for Ctrl+Shift+V
-            if (event.data.name == "pastetext" && event.data.commandData.from == "keystrokeHandler") {
-                event.cancel();
-            }
-        })
+    CKEDITOR.replace('list_info2', {
+            filebrowserUploadUrl: "{{ route(''admin.properties.store', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form'
     });
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor();
-    });
+</script> -->
+
+<script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#list_info2' ) )
+        .catch( error => {
+            console.error( error );
+        } );
 </script>
 
 <script>
@@ -378,23 +375,23 @@
     (function($) {
         "use strict";
         // Multiple images preview with JavaScript
-//        var multiImgPreview = function(input, imgPreviewPlaceholder) {
-//
-//            if (input.files) {
-//                var filesAmount = input.files.length;
-//                for (i = 0; i < filesAmount; i++) {
-//                    var reader = new FileReader();
-//                    reader.onload = function(event) {
-//                        $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(imgPreviewPlaceholder);
-//                    }
-//                    reader.readAsDataURL(input.files[i]);
-//                }
-//            }
-//        };
+        //        var multiImgPreview = function(input, imgPreviewPlaceholder) {
+        //
+        //            if (input.files) {
+        //                var filesAmount = input.files.length;
+        //                for (i = 0; i < filesAmount; i++) {
+        //                    var reader = new FileReader();
+        //                    reader.onload = function(event) {
+        //                        $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(imgPreviewPlaceholder);
+        //                    }
+        //                    reader.readAsDataURL(input.files[i]);
+        //                }
+        //            }
+        //        };
 
-//        $('#images').on('change', function() {
-//            multiImgPreview(this, 'div.imgPreview');
-//        });
+        //        $('#images').on('change', function() {
+        //            multiImgPreview(this, 'div.imgPreview');
+        //        });
         $('#photo-upload').change(function(){
 
             let reader = new FileReader();
@@ -410,7 +407,7 @@
 </script>
 <script >
     $(function() {
-// Multiple images preview with JavaScript
+    // Multiple images preview with JavaScript
         var previewImages = function(input, imgPreviewPlaceholder) {
             if (input.files) {
                 var filesAmount = input.files.length;
