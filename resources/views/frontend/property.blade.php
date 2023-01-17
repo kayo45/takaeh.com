@@ -443,7 +443,7 @@
                                                         <div class="icon">
                                                             <i class="las la-phone-alt"></i>
                                                         </div>
-                                                        <div class="text"><a href="tel:44078767595">{{$property->user->mobile}}</a></div>
+                                                        <div class="text"><a href="tel:{{$property->user->mobile}}">{{$property->user->mobile}}</a></div>
                                                     </div>
                                                 </li>
 
