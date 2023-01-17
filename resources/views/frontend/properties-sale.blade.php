@@ -250,7 +250,7 @@
                                                             </div>
                                                             <a class="trend-right float-right">
                                                                 <div class="trend-open">
-                                                                    <p><span class="per_sale">starts from</span>${{$property->price}}</p>
+                                                                    <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -322,7 +322,7 @@
                                                             </li>
                                                         </ul>
                                                         <div class="trending-bottom trend-open no-pad-lr">
-                                                            <p><span class="per_sale">starts from</span>${{$property->price}}</p>
+                                                            <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p>
                                                         </div>
                                                     </div>
                                                 </div>

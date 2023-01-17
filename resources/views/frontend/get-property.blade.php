@@ -42,7 +42,7 @@
                                     <!-- item-filter-list Menu ends -->
                                 </div>
                             </div>
-                        
+
                             <div class="col-lg-5 col-sm-12">
                                 <div class="item-element res-box  text-right sm-left">
                                     {{-- <p>Showing <span> {{($properties->currentPage()-1)* $properties->perPage()+($properties->total() ? 1:0)}} to {{($properties->currentPage()-1)*$properties->perPage()+count($properties)}}  of  {{$properties->total()}}</span>  Listings</p> --}}
@@ -109,8 +109,8 @@
                                                         </li>
                                                     </ul>
                                                     <div class="trending-bottom trend-open">
-                                                        @if($property->type == 'sale') <p><span class="per_sale">starts from</span>${{$property->price}}</p> @endif
-                                                        @if($property->type == 'rent') <p>${{$property->price}}<span class="per_month">month</span></p> @endif
+                                                        @if($property->type == 'sale') <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p> @endif
+                                                        @if($property->type == 'rent') <p>{{$property->currency->icon}} {{$property->price}}<span class="per_month">month</span></p> @endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -183,7 +183,7 @@
                                                             </li>
                                                         </ul>
                                                         <div class="trending-bottom trend-open no-pad-lr">
-                                                            <p><span class="per_sale">starts from</span>${{$property->price}}</p>
+                                                            <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
