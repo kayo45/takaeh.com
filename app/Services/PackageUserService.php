@@ -23,7 +23,7 @@ class PackageUserService
         $package_user = $this->_packageUserRepository->getActivePackageById($data);
         $package = $this->_packageRepository->getById($package_user['package_id']);
 
-        $item['price'] = (int) $package_user['price']-$package['credits'];
+        $item['price'] = $package['credits'] - 1;
         $item['item'] = $package_user['item'] - 1;
 
         $this->_packageUserRepository->update($item,$data);
