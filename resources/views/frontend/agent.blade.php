@@ -50,11 +50,10 @@
                                         @if($agent->skype)<li><span>{{trans('file.skype')}}:</span>{{$agent->skype}}</li>@endif
                                     </ul>
                                     <ul class="social-buttons style1">
-                                        <li><a href="#"><i class="lab la-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="lab la-twitter"></i></a></li>
-                                        <li><a href="#"><i class="lab la-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="lab la-youtube"></i></a></li>
-                                        <li><a href="#"><i class="lab la-dribbble"></i></a></li>
+                                        <li><a href="{{$property->user->fb}}"><i class="lab la-facebook-f"></i></a></li>
+                                        <li><a href="{{$property->user->twitter}}"><i class="lab la-twitter"></i></a></li>
+                                        <li><a href="{{$property->user->instagram}}"><i class="lab la-pinterest-p"></i></a></li>
+                                        <li><a href="{{$property->user->youtube}}"><i class="lab la-youtube"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

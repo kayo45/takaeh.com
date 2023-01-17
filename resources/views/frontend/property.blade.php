@@ -460,7 +460,7 @@
                                                 <li><a href="{{$property->user->fb}}"><i class="lab la-facebook-f"></i></a></li>
                                                 <li><a href="{{$property->user->twitter}}"><i class="lab la-twitter"></i></a></li>
                                                 <li><a href="{{$property->user->instagram}}"><i class="lab la-pinterest-p"></i></a></li>
-                                                <li><a href="{{$property->user->fb}}"><i class="lab la-youtube"></i></a></li>
+                                                <li><a href="{{$property->user->youtube}}"><i class="lab la-youtube"></i></a></li>
                                             </ul>
                                             <a href="{{url('/agents/'.$property->user->id)}}" class="agent-link">{{trans('file.view_profile')}}</a>
                                         </div>
