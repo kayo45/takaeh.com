@@ -427,10 +427,10 @@
                                     @if(!env('USER_VERIFIED'))
                                     <img loading="lazy" src="{{URL::asset('/images/users/agent.jpg')}}" alt="">
                                     @else
-                                        @if(file_exists( public_path() . '/images/users/'.$agent->image))
-                                            <img loading="lazy" src="{{ URL::asset('/images/users/'.$agent->image) }}" alt="Image">
+                                        @if(file_exists( public_path() . '/images/users/'.$property->user->image))
+                                            <img loading="lazy" src="{{ URL::asset('/images/users/'.$property->user->image) }}" alt="Image">
                                         @else
-                                            <img loading="lazy" src="{{asset('images/agents/agent.jpg')}}" alt="#">
+                                            <img loading="lazy" src="{{asset('images/agents/agent_1.jpg')}}" alt="#">
                                         @endif
                                     @endif
                                     <div class="single-team-info">
