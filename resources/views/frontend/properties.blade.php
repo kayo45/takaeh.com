@@ -1,5 +1,5 @@
 @extends('frontend.main')
-@section('title','SarchHolm-Properties')
+@section('title',$property->propertyTranslation->title ?? $property->propertyTranslationEnglish->title ?? null)
 @push('styles')
 <link href="{{asset('css/leaflet.css')}}" rel="stylesheet" />
 <style>
