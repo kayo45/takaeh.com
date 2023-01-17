@@ -94,7 +94,7 @@
                                                         <ul class="social-buttons style2">
                                                             <li><a href="{{$agent->fb}}"><i class="lab la-facebook-f"></i></a></li>
                                                             <li><a href="{{$agent->twitter}}"><i class="lab la-twitter"></i></a></li>
-                                                            <li><a href="{{$agent->instagram}}"><i class="lab la-pinterest-p"></i></a></li>
+                                                            <li><a href="{{$agent->instagram}}"><i class="lab la-instagram"></i></a></li>
                                                             <li><a href="{{$agent->youtube}}"><i class="lab la-youtube"></i></a></li>
                                                         </ul>
                                                         <a href="{{url('/agents/'.$agent->id)}}" class="agent-link">{{trans('file.view_profile')}}</a>
@@ -133,7 +133,7 @@
                                                                     <div class="icon">
                                                                         <i class="las la-phone-alt"></i>
                                                                     </div>
-                                                                    <div class="text"><a href="tel:44078767595">{{$agent->mobile}}</a></div>
+                                                                    <div class="text"><a href="tel:{{$agent->mobile}}">{{$agent->mobile}}</a></div>
                                                                 </div>
                                                             </li>
 
@@ -149,8 +149,8 @@
                                                         <ul class="social-buttons style2">
                                                             <li><a href="{{$agent->fb}}"><i class="lab la-facebook-f"></i></a></li>
                                                             <li><a href="{{$agent->twitter}}"><i class="lab la-twitter"></i></a></li>
-                                                            <li><a href="{{$agent->fb}}"><i class="lab la-pinterest-p"></i></a></li>
-                                                            <li><a href="{{$agent->fb}}"><i class="lab la-youtube"></i></a></li>
+                                                            <li><a href="{{$agent->instagram}}"><i class="lab la-instagram"></i></a></li>
+                                                            <li><a href="{{$agent->youtube}}"><i class="lab la-youtube"></i></a></li>
                                                         </ul>
                                                         <a href="{{url('/agents/'.$agent->id)}}" class="agent-link">View Profile</a>
                                                     </div>
