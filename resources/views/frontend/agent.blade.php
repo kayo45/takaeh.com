@@ -272,7 +272,8 @@
                                                                 </li>
                                                             </ul>
                                                             <div class="trending-bottom trend-open">
-                                                                    <p>{{$property->currency->icon}} {{$property->price}}<span class="per_month">month</span> </p>
+                                                                @if($property->type == 'sale') <p><span class="per_sale">starts from</span>{{$property->currency->icon}} {{$property->price}}</p> @endif
+                                                                @if($property->type == 'rent') <p>{{$property->currency->icon}} {{$property->price}}<span class="per_month">month</span></p> @endif
                                                             </div>
                                                         </div>
                                                     </div>
@@ -345,8 +346,9 @@
                                                 <p>{{$item->state->stateTranslation->name ?? $item->state->stateTranslationEnglish->name ?? null}}, {{$item->city->cityTranslation->name ?? $item->city->cityTranslationEnglish->name ?? null}}</p>
                                             </div>
                                             <div class="trend-open">
-                                                @if($item->type == 'rent')<p>${{$item->price}}<span> /month</span></p>@endif
-                                                @if($item->type == 'sale')<p><span>starts from/</span> ${{$item->price}}</p>@endif
+                                                @if($item->type == 'rent')<p>{{$item->currency->icon}} {{$item->price}}<span> /month</span></p>@endif
+                                                @if($item->type == 'sale')<p><span>starts from/</span> {{$item->currency->icon}} {{$item->price}}</p>@endif
+
                                             </div>
                                         </div>
                                     </div>
