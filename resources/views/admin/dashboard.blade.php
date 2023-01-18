@@ -87,8 +87,8 @@
                                 <h3><a href="{{route('front.property',['property'=>$recentlyAddedProperty->id])}}">{{$recentlyAddedProperty->propertyTranslation->title ?? $recentlyAddedProperty->propertyTranslationEnglish->title  ?? null }}</a></h3>
                                 <p class="list-address"><i class="las la-map-marker-alt"></i>{{$recentlyAddedProperty->state->stateTranslation->name ?? $recentlyAddedProperty->state->stateTranslationEnglish->name  ?? null }}, {{$recentlyAddedProperty->city->cityTranslation->name ?? $recentlyAddedProperty->city->cityTranslationEnglish->name  ?? null }}</p>
                                 <div class="trend-open">
-                                    @if($recentlyAddedProperty->type == 'sale') <p><span class="per_sale">starts from</span>${{$recentlyAddedProperty->price}}</p> @endif
-                                    @if($recentlyAddedProperty->type == 'rent') <p>${{$recentlyAddedProperty->price}}<span class="per_month">month</span></p> @endif
+                                    @if($recentlyAddedProperty->type == 'sale') <p><span class="per_sale">starts from</span>{{$recentlyAddedProperty->currency->icon}} {{$recentlyAddedProperty->price}}</p> @endif
+                                    @if($recentlyAddedProperty->type == 'rent') <p>{{$recentlyAddedProperty->currency->icon}} {{$recentlyAddedProperty->price}}<span class="per_month">month</span></p> @endif
                                 </div>
                                 <div class="ratings">
                                     <i class="ion-ios-star"></i>
