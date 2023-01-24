@@ -235,7 +235,7 @@
                                 <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="list_info">Content</label>
-                                            <textarea name="content" class="form-control ckeditor" id="list_info2" rows="4" placeholder="Enter your text here">{!! clean($property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null) !!}</textarea>
+                                            <textarea name="content" class="form-control ckeditor" id="list_info2" rows="4" placeholder="Enter your text here">{!! $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null !!}</textarea>
                                         </div>
                                 </div>
                             </div>
