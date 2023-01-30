@@ -15,10 +15,6 @@
 </style>
 @endpush
 
-@push('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.3.1/tinymce.min.js"></script>
-@endpush
-
 @section('content')
     <div class="dash-content">
         <div class="container-fluid">
@@ -242,7 +238,7 @@
                                 <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="list_info">Content</label>
-                                            <textarea name="content" class="form-control ckeditor" id="content" rows="4" placeholder="Enter your text here">
+                                            <textarea name="content" class="form-control" id="content" rows="4" placeholder="Enter your text here">
                                                 <!-- {!! $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null !!} -->
                                                 {{str_replace('@', '"', $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null)}}
                                             </textarea>
@@ -330,7 +326,8 @@
 @endsection
 @push('scripts')
 <!--CKEditor JS-->
-<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+<!-- <script src="{{asset('ckeditor/ckeditor.js')}}"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.3.1/tinymce.min.js"></script>
 <script type="text/javascript">
     tinymce.init({
         selector: 'textarea#content',
