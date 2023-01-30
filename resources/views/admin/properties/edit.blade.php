@@ -23,8 +23,10 @@
             </div>
             <div class="row">
                 <form id="update-content-form" data-action="{{route('admin.properties.update',$property->id)}}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
+                @method('patch')
+                @csrf
+                <!-- @csrf
+                    @method('PUT') -->
                     <input type="hidden" name="local" value="{{$locale}}">
                     <div class="col-md-12">
                     <div class="db-add-list-wrap">
