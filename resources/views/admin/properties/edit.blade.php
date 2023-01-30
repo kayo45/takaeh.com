@@ -22,7 +22,7 @@
                 <ul></ul>
             </div>
             <div class="row">
-                <form id="update-content-form" action="{{route('admin.properties.update',$property->id)}}" method="POST" enctype="multipart/form-data">
+                <form id="update-content-form" data-action="{{route('admin.properties.update',$property->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <input type="hidden" name="local" value="{{$locale}}">
