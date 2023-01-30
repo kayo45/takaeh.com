@@ -75,7 +75,7 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
 
-        // dd($request);
+        $request['content'] = str_replace('"', '@', $request->content);
         $this->_propertyModel->add($request);
         return redirect()->route('admin.properties.index');
     }
@@ -118,6 +118,7 @@ class PropertyController extends Controller
             // {
             //     $this->_propertyModel->updateModerationStatus($request,$id);
             // }else{
+                $request['content'] = str_replace('"', '@', $request->content);
                 $this->_propertyModel->update($request,$id);
             // }
             notify()->success('Property updated successfully!');
