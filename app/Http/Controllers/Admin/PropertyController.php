@@ -74,7 +74,7 @@ class PropertyController extends Controller
 
     public function store(Request $request)
     {
-
+        $request = $request;
         $request['description'] = str_replace('"', '@', $request['description']);
         $request['description'] = $request['description'];
         $request['content'] = str_replace('"', '@', $request['content']);
@@ -121,6 +121,7 @@ class PropertyController extends Controller
             // {
             //     $this->_propertyModel->updateModerationStatus($request,$id);
             // }else{
+                $request = $request;
                 $request['description'] = str_replace('"', '@', $request['description']);
                 $request['description'] = $request['description'];
                 $request['content'] = str_replace('"', '@', $request['content']);
