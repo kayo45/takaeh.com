@@ -74,12 +74,12 @@ class PropertyController extends Controller
 
     public function store(Request $request)
     {
-        $request = $request;
-        $request['description'] = str_replace('"', '@', $request['description']);
-        $request['description'] = $request['description'];
-        $request['content'] = str_replace('"', '@', $request['content']);
-        $request['content'] = $request['content'];
-        $this->_propertyModel->add($request);
+        $data = $request;
+        $data['description'] = str_replace('"', '@', $data['description']);
+        $data['description'] = $data['description'];
+        $data['content'] = str_replace('"', '@', $data['content']);
+        $data['content'] = $data['content'];
+        $this->_propertyModel->add($data);
         return redirect()->route('admin.properties.index');
     }
 
@@ -121,12 +121,12 @@ class PropertyController extends Controller
             // {
             //     $this->_propertyModel->updateModerationStatus($request,$id);
             // }else{
-                $request = $request;
-                $request['description'] = str_replace('"', '@', $request['description']);
-                $request['description'] = $request['description'];
-                $request['content'] = str_replace('"', '@', $request['content']);
-                $request['content'] = $request['content'];
-                $this->_propertyModel->update($request,$id);
+                $data = $request;
+                $data['description'] = str_replace('"', '@', $data['description']);
+                $data['description'] = $data['description'];
+                $data['content'] = str_replace('"', '@', $data['content']);
+                $data['content'] = $data['content'];
+                $this->_propertyModel->update($data,$id);
             // }
             notify()->success('Property updated successfully!');
             return redirect()->route('admin.properties.index');
