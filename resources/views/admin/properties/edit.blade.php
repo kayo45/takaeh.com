@@ -14,6 +14,11 @@
     }
 </style>
 @endpush
+
+@push('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.3.1/tinymce.min.js"></script>
+@endpush
+
 @section('content')
     <div class="dash-content">
         <div class="container-fluid">
@@ -21,7 +26,7 @@
                 <ul></ul>
             </div>
             <div class="row">
-                <form action="{{route('admin.properties.update',$property->id)}}" method="POST" enctype="multipart/form-data">
+                <form id="update-content-form" action="{{route('admin.properties.update',$property->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <input type="hidden" name="local" value="{{$locale}}">
@@ -228,7 +233,7 @@
                                     <form>
                                         <div class="form-group">
                                             <label for="list_info">Description</label>
-                                            <textarea name="description" class="form-control" id="list_info" rows="4" placeholder="Enter your text here">
+                                            <textarea name="description" class="form-control" id="description" rows="4" placeholder="Enter your text here">
                                                 @if(isset($propertyTranslation->description)) {{str_replace('@', '"', $propertyTranslation->description)}} @else "" @endif
                                             </textarea>
                                         </div>
@@ -237,7 +242,7 @@
                                 <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="list_info">Content</label>
-                                            <textarea name="content" class="form-control ckeditor" id="list_info2" rows="4" placeholder="Enter your text here">
+                                            <textarea name="content" class="form-control ckeditor" id="content" rows="4" placeholder="Enter your text here">
                                                 <!-- {!! $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null !!} -->
                                                 {{str_replace('@', '"', $property->propertyDetails->propertyDetailTranslation->content ?? $property->propertyDetails->propertyDetailTranslationEnglish->content ?? null)}}
                                             </textarea>
@@ -327,33 +332,39 @@
 <!--CKEditor JS-->
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
-    CKEDITOR.replace('list_info');
-    CKEDITOR.replace('list_info2');
-    CKEDITOR.on("instanceReady", function(event) {
-        event.editor.on("beforeCommandExec", function(event) {
-            // Show the paste dialog for the paste buttons and right-click paste
-            if (event.data.name == "paste") {
-                event.editor._.forcePasteDialog = true;
-            }
-            // Don't show the paste dialog for Ctrl+Shift+V
-            if (event.data.name == "pastetext" && event.data.commandData.from == "keystrokeHandler") {
-                event.cancel();
-            }
-        })
+    tinymce.init({
+        selector: 'textarea#content',
+        height: 600
     });
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor();
+
+    $(document).ready(function() {
+
+        var formId = '#update-content-form';
+
+        $(formId).on('submit', function(e) {
+            e.preventDefault();
+
+            var data = $(formId).serializeArray();
+            data.push({name: 'content', value: tinyMCE.get('content').getContent()});
+
+            $.ajax({
+                type: 'POST',
+                url: $(formId).attr('data-action'),
+                data: data,
+                success: function (response, textStatus, xhr) {
+                    window.location=response.redirectTo;
+                },
+                complete: function (xhr) {
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    var response = XMLHttpRequest;
+
+                }
+            });
+        });
     });
 </script>
-
-<!-- <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#list_info2' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script> -->
 
 
 <script>
@@ -428,7 +439,7 @@
 </script>
 <script >
     $(function() {
-// Multiple images preview with JavaScript
+        // Multiple images preview with JavaScript
         var previewImages = function(input, imgPreviewPlaceholder) {
             if (input.files) {
                 var filesAmount = input.files.length;
