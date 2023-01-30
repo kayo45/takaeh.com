@@ -229,7 +229,7 @@
                                         <div class="form-group">
                                             <label for="list_info">Description</label>
                                             <textarea name="description" class="form-control" id="list_info" rows="4" placeholder="Enter your text here">
-                                                @if(isset($propertyTranslation->description)) {{str_replace('@', '"', $propertyTranslation->description}} @else "" @endif
+                                                @if(isset($propertyTranslation->description)) {{str_replace('@', '"', $propertyTranslation->description)}} @else "" @endif
                                             </textarea>
                                         </div>
                                     </form>
