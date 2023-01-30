@@ -118,7 +118,9 @@ class PropertyController extends Controller
             // {
             //     $this->_propertyModel->updateModerationStatus($request,$id);
             // }else{
-                $request['content'] = str_replace('"', '@', $request->content);
+                $request = $request;
+                $request['content'] = str_replace('"', '@', $request['content']);
+                $request['content'] = $request['content'];
                 $this->_propertyModel->update($request,$id);
             // }
             notify()->success('Property updated successfully!');
